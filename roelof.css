@@ -1,0 +1,145 @@
+:root{
+ --soft_blue: hsl(215, 51%, 70%); 
+ --cyan: hsl(178, 100%, 50%); 
+ --very_dark_blue_main: hsl(217, 54%, 11%); 
+ --very_dark_blue_card: hsl(216, 50%, 16%); 
+ --very_dark_blue_line: hsl(215, 32%, 27%); 
+ --white: hsl(0, 0%, 100%); 
+}
+
+* {
+    margin: 0 ; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    background: var(--very_dark_blue_main);
+    padding: 40px 20px;  
+}
+
+main {
+    background: var(--very_dark_blue_card);
+    width: 320px;
+    border-radius: 20px;
+    padding-left: 15px;  
+    padding-right: 15px; 
+}
+
+.header {
+    width: 290px; 
+    height: 100%;
+    margin-top: 40px;
+    border-radius: 20px;
+    position: relative;    
+}
+
+
+.overlay {
+    background: var(--cyan);
+    width: 290px; 
+    height: 290px;
+    position: absolute; 
+    top: 200px;
+    opacity: 0 ;
+    border-radius: 20px;
+    transition: opacity 0.3s ease-in; 
+}
+
+.overlay:hover {
+    opacity: 0.5;
+    cursor: pointer;     
+}
+
+.overlay:hover::after {
+    content:  url('./images/icon-view.svg');
+    fill: white;
+    height: 290px; 
+    width: 290px; 
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+}
+
+h1 {
+    color: white;
+    margin-top: 30px;
+    font-size: 24px;   
+}
+
+h1:hover {
+    color: var(--cyan);
+    cursor: pointer; 
+}
+
+p {
+    color: var(--soft_blue);
+    margin-top: 15px;
+    font-size: 16px;   
+}
+
+.price_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price, 
+.days_left {
+    display: flex; 
+}
+
+.price img {
+    width: 11px; 
+    height: 18px;
+    margin-right: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px;     
+}
+
+.price p {
+   color: var(--cyan); 
+}
+
+.days_left img {
+    width: 17px; 
+    height: 17px;
+    margin-right: 10px; 
+    margin-top: 15px; 
+}
+
+hr {
+    border: 1px solid var(--very_dark_blue_line);
+    margin-bottom: 30px;  
+}
+
+.owner {
+    display: flex;
+    padding-bottom: 30px;;  
+}
+
+.owner img {
+    width: 80px; 
+    height: 80px;
+    border: 3px solid white; 
+    border-radius: 50%;
+    margin-right: 10px;   
+}
+
+.owner p {
+    margin-top: 30px; 
+}
+
+.bold {
+    color: white; 
+}
+
+.bold:hover {
+    color: var(--cyan); 
+    cursor:pointer; 
+}
